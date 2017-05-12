@@ -1,0 +1,59 @@
+Hello 
+
+I use Linux Mint for many reasons but some times some actions are a little more complicated, like installing a printer. 
+
+
+this repo has the file and instructions in how to install the printer in linux mint. so the next time that I format my computer I can do the Printer reinstall fast. 
+
+Insturctions: 
+
+The full instructions can be located on my Block: http://blog.mycode.website/linux/
+
+or here are aswell. 
+
+Most New instructions in how to install the printer: 
+
+I got this instructions from the following: Link
+
+
+
+01- Installing CUPS
+
+To Install CUPS open the terminal and type:  sudo apt-get install cups
+
+
+
+02- Downloading the Drivers:
+
+Go to the official Brother page Link and download the .deb version of the CUPSWRAPPER and LPR.
+
+To make my life easy I save those files in my GitHub. you can download from there: MFC-7360N
+
+
+
+03- Installing the printer drivers
+
+Open the terminal, CD to the folder whit the files, type the following commands one at the time: 
+
+sudo dpkg  -i  --force-all mfc7360nlpr-2.1.0-1.i386.deb
+
+sudo dpkg -i --force-all cupswrapperMFC7360N-2.0.4-2.i386.deb
+
+dpkg  -l  |  grep  Brother   // This is just to make sure all went OK.
+and the printer is istall.
+
+
+
+04- Change the printer to be Network. 
+
+Click: Menu / Control Center / Printers
+
+There Right click to the printer: MFC7360N / select "Properties"
+
+in the line: "Device URI:" click the button "Change"
+
+in the following window from the options select from the list in "Network Printer" (if not populate wait a minute)
+
+Select: Brother MFC-7360N  the option that says: AppSocket/JetDirect network printer via DNS-SD.
+
+apply and save the changes. 
